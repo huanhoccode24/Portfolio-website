@@ -1,0 +1,90 @@
+{
+  "Navigation": {
+    "Home": "Home",
+    "Resume": "Resume",
+    "Projects": "Projects",
+    "Services": "Services",
+    "Skills": "Skills",
+    "Testimonials": "Testimonials",
+    "Contact": "Contact",
+    "Upload": "Upload",
+    "DownloadCv": "Download CV"
+  },
+
+  "HomePage": {
+    "HeroTitle": "Hi, I'm a Web Developer",
+    "HeroSubtitle": "Hi, I'm Huan - Passionate about Web Development",
+    "HeroProjectButton": "View projects",
+    "HeroUploadButton": "Upload File"
+  },
+
+  "Services": {
+    "ServiceTitle": "What can I help you with?",
+    "Items": {
+      "UI-UX": {
+        "Name": "UI/UX",
+        "Desc": "Modern interface design, optimized to enhance user experience, aims to create products that are not only visually appealing but also easy to interact with and highly effective."
+      },
+      "Web-MobileApp": {
+        "Name": "Web/Mobile App",
+        "Desc": "Develop professional Web and Mobile applications, optimize performance, and deliver real value to users through high-quality source code."
+      },
+      "Design-Creative": {
+        "Name": "Design/Creative",
+        "Desc": "Transform ideas into intuitive and creative interfaces. Focus on building a distinctive brand identity, ensuring consistent aesthetics and attracting users at first glance."
+      },
+      "Development": {
+        "Name": "Development",
+        "Desc": "Realize complex features with optimized source code. I prioritize writing clean, scalable, and maintainable code to ensure the system operates stably, smoothly, and securely."
+      }
+    }
+  },
+
+  "Resume": {
+    "EducationTitle": "Education",
+    "ExperienceTitle": "Experience",
+
+    "EducationItems": {
+      "UEF": {
+        "Role": "UEF - University of Economics and Finance HCMC",
+        "Desc": "Final-year student majoring in Software Engineering.",
+        "Date": "April 2022 - August 2026"
+      }
+    },
+
+    "ExperienceItems": {
+      "Frontend": {
+        "Role": "Frontend Developer | Learning",
+        "Description": "Currently focusing on learning and applying Next.js to build smooth web applications. Using Tailwind CSS and TypeScript to create responsive interfaces, optimize SEO and performance."
+      },
+      "Backend": {
+        "Role": "Backend Developer",
+        "Description": "Building powerful API systems using ASP.NET Core. Applying architectures like Clean Architecture and Entity Framework to manage business logic and ensure system stability."
+      },
+      "Database": {
+        "Role": "Database Management",
+        "Description": "Designing and managing SQL Server databases. Structuring relational tables and ensuring data integrity."
+      }
+    }
+  },
+
+  "Skill": {
+    "SkillTitle": "Skills",
+    "SkillItems": {
+      "DotNet": ".NET Core",
+      "SQLServer": "SQL Server",
+      "NodeJS": "Node.js",
+      "JavaScript": "JavaScript",
+      "React": "ReactJS | Learning",
+      "Next": "NextJS | Learning"
+    }
+  },
+
+  "Projects": {
+    "ProjectTitle": "My Projects"
+  },
+
+  "Testimonials": {
+    "TestimonialsTitle": "What do people think of me?"
+  }
+}

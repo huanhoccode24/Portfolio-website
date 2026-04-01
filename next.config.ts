@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Các cấu hình khác của bạn ở đây (nếu có) */
 };
 
-export default nextConfig;
+// Bọc nextConfig bằng withNextIntl
+export default withNextIntl(nextConfig);

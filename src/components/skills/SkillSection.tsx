@@ -2,44 +2,46 @@ import React from "react";
 import Titles from "../general/Titles";
 import { DiDotnet, DiJavascript, DiMsqlServer } from "react-icons/di";
 import { RiNextjsFill, RiNodejsLine, RiReactjsFill } from "react-icons/ri";
+import { useTranslations } from "next-intl";
 
 const skills = [
   {
-    name: ".NetCore",
+    key: "DotNet",
     icon: <DiDotnet />,
     skillLevel: 80,
   },
   {
-    name: "SQL Server",
+    key: "SQLServer",
     icon: <DiMsqlServer />,
     skillLevel: 80,
   },
   {
-    name: "NodeJS",
+    key: "NodeJS",
     icon: <RiNodejsLine />,
     skillLevel: 60,
   },
   {
-    name: "JavaScript",
+    key: "JavaScript",
     icon: <DiJavascript />,
     skillLevel: 60,
   },
   {
-    name: "ReactJS | Learning",
+    key: "React",
     icon: <RiReactjsFill />,
     skillLevel: 50,
   },
   {
-    name: "NextJS | Learning",
+    key: "Next",
     icon: <RiNextjsFill />,
     skillLevel: 50,
   },
 ];
 
 export default function SkillSection() {
+  const t = useTranslations("Skill");
   return (
     <section id="skills" className="py-16">
-      <Titles title="Kỹ Năng" as="h1" />
+      <Titles title={t("SkillTitle")} as="h1" />
       <div className="flex flex-wrap justify-center gap-6">
         {skills.map((skill, index) => {
           return (
@@ -53,7 +55,9 @@ export default function SkillSection() {
               <p className="text-2xl font-semibold my-4 text-gray-200">
                 {skill.skillLevel}%
               </p>
-              <p className="text-indigo-500 font-semibold">{skill.name}</p>
+              <p className="text-indigo-500 font-semibold">
+                {t(`SkillItems.${skill.key}`)}
+              </p>
             </div>
           );
         })}

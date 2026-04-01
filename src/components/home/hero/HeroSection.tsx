@@ -4,13 +4,20 @@ import AnimatedIntro from "./AnimatedIntro";
 import LinkButton from "@/components/general/LinkButton";
 import { LuArrowRight, LuUpload } from "react-icons/lu";
 import Particles from "./Particles";
+import { useTranslations, useLocale } from "next-intl";
 export default function HeroSection() {
+  const t = useTranslations("HomePage");
+  const locale = useLocale();
+
   return (
     <section
       id="home"
       className="h-screen relative flex justify-center items-center overflow-hidden flex-col"
     >
-      <div style={{ width: "100%", height: "600px", position: "relative" }}>
+      <div
+        style={{ width: "100%", height: "600px", position: "relative" }}
+        className="pointer-events-none"
+      >
         <Particles
           particleColors={["#ffffff"]}
           particleCount={200}
@@ -44,13 +51,13 @@ export default function HeroSection() {
           data-aos-delay="200"
           className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-6 font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-gray-300"
         >
-          Hi, I&apos;m a Web Developer
+          {t("HeroTitle")}
         </h1>
         <AnimatedIntro />
         <div className="">
           <LinkButton
             href="#projects"
-            text="Xem dự án"
+            text={t("HeroProjectButton")}
             icon={LuArrowRight}
             rounded={true}
             aosType="fade-up"
@@ -59,8 +66,8 @@ export default function HeroSection() {
           />
 
           <LinkButton
-            href={`/uploads`}
-            text="Upload File"
+            href={`/${locale}/uploads`}
+            text={t("HeroUploadButton")}
             icon={LuUpload}
             rounded={true}
             aosType="fade-up"

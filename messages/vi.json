@@ -1,0 +1,90 @@
+{
+  "Navigation": {
+    "Home": "Trang chủ",
+    "Resume": "Hồ sơ cá nhân",
+    "Projects": "Dự án",
+    "Services": "Dịch vụ",
+    "Skills": "Kỹ năng",
+    "Testimonials": "Nhận xét",
+    "Contact": "Liên hệ",
+    "Upload": "Tải lên",
+    "DownloadCv": "Tải CV"
+  },
+
+  "HomePage": {
+    "HeroTitle": "Chào, tôi là một Web Developer",
+    "HeroSubtitle": "Xin chào, tôi là Huan - Đam mê lập trình Web",
+    "HeroProjectButton": "Xem dự án",
+    "HeroUploadButton": "Tải lên tệp"
+  },
+
+  "Services": {
+    "ServiceTitle": "Tôi có thể giúp gì cho bạn?",
+    "Items": {
+      "UI-UX": {
+        "Name": "Giao diện người dùng/UX",
+        "Desc": "Thiết kế giao diện hiện đại, tối ưu hóa trải nghiệm người dùng nhằm tạo ra các sản phẩm không chỉ đẹp mắt mà còn dễ dàng tương tác và đạt hiệu quả cao."
+      },
+      "Web-MobileApp": {
+        "Name": "Web/Mobile App",
+        "Desc": "Phát triển ứng dụng Web và Mobile chuyên nghiệp, tối ưu hiệu suất và mang lại giá trị thực tế cho người dùng thông qua mã nguồn chất lượng cao."
+      },
+      "Design-Creative": {
+        "Name": "Design/Creative",
+        "Desc": "Chuyển hóa ý tưởng thành giao diện trực quan và sáng tạo. Tập trung vào việc xây dựng bộ nhận diện đặc trưng, đảm bảo tính thẩm mỹ đồng nhất và thu hút người dùng ngay từ cái nhìn đầu tiên."
+      },
+      "Development": {
+        "Name": "Development",
+        "Desc": "Hiện thực hóa các tính năng phức tạp bằng mã nguồn tối ưu. Tôi ưu tiên viết code sạch, dễ mở rộng và bảo trì, đảm bảo hệ thống vận hành ổn định, mượt mà và an toàn."
+      }
+    }
+  },
+
+  "Resume": {
+    "EducationTitle": "Học vấn",
+    "ExperienceTitle": "Kinh nghiệm",
+
+    "EducationItems": {
+      "UEF": {
+        "Role": "UEF - Đại học Kinh tế - Tài chính TP.HCM",
+        "Desc": "Sinh viên năm cuối chuyên ngành Công nghệ phần mềm.",
+        "Date": "Tháng 4 2022 - Tháng 8 2026"
+      }
+    },
+
+    "ExperienceItems": {
+      "Frontend": {
+        "Role": "Frontend Developer | Learning",
+        "Description": "Đang tập trung nghiên cứu và ứng dụng Next.js để xây dựng các ứng dụng web mượt mà. Sử dụng Tailwind CSS và TypeScript để tạo giao diện responsive, tối ưu SEO và hiệu suất."
+      },
+      "Backend": {
+        "Role": "Backend Developer",
+        "Description": "Xây dựng hệ thống API bằng ASP.NET Core. Áp dụng Clean Architecture và Entity Framework để quản lý logic nghiệp vụ và đảm bảo hệ thống ổn định."
+      },
+      "Database": {
+        "Role": "Database Management",
+        "Description": "Thiết kế và quản trị cơ sở dữ liệu SQL Server, đảm bảo tính toàn vẹn và tối ưu dữ liệu."
+      }
+    }
+  },
+
+  "Skill": {
+    "SkillTitle": "Kỹ năng",
+    "SkillItems": {
+      "DotNet": ".NET Core",
+      "SQLServer": "SQL Server",
+      "NodeJS": "Node.js",
+      "JavaScript": "JavaScript",
+      "React": "ReactJS | Đang học",
+      "Next": "NextJS | Đang học"
+    }
+  },
+
+  "Projects": {
+    "ProjectTitle": "Dự án của tôi"
+  },
+
+  "Testimonials": {
+    "TestimonialsTitle": "Mọi Người Đánh Giá Gì Về Tôi?"
+  }
+}
