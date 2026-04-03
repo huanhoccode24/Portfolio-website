@@ -4,41 +4,28 @@ import Logo from "./Logo";
 
 import { LuDownload, LuMenu } from "react-icons/lu";
 import MobileNav from "./Mobile/MobileNav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LinkButton from "../LinkButton";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 export const navLinks = [
-  { url: "/#home", label: "Home" },
-  { url: "/#resume", label: "Resume" },
-  { url: "/#projects", label: "Projects" },
-  { url: "/#services", label: "Services" },
-  { url: "/#skills", label: "Skills" },
-  { url: "/#testimonials", label: "Testimonials" },
-  { url: "/#contact", label: "Contact" },
-  { url: "/#uploads", label: "Upload" },
+  { url: "#home", label: "Home" },
+  { url: "#resume", label: "Resume" },
+  { url: "#projects", label: "Projects" },
+  { url: "#services", label: "Services" },
+  { url: "#skills", label: "Skills" },
+  { url: "#testimonials", label: "Testimonials" },
+  { url: "#contact", label: "Contact" },
+  { url: "#uploads", label: "Upload" },
 ];
 
 export default function Navbar() {
+  const t = useTranslations("Navigation");
   const [navOpen, setNavOpen] = useState(false);
-  const [navBackground, setNavBackground] = useState(false);
-
-  useEffect(() => {
-    const navHandler = () => {
-      if (window.scrollY >= 90) setNavBackground(true);
-      if (window.scrollY < 90) setNavBackground(false);
-    };
-
-    window.addEventListener("scroll", navHandler);
-
-    return () => {
-      window.removeEventListener("scroll", navHandler);
-    };
-  }, []);
 
   return (
-    <nav
-      className={`h-18 fixed z-50 w-full transition-all duration-300 ${navBackground ? "bg-slate-900 shadow-md" : ""}`}
-    >
+    <nav className="h-18 fixed z-50 w-full bg-slate-900/90 backdrop-blur-lg shadow-md transition-all duration-300">
       <div className=" flex items-center h-full justify-between w-[90%] mx-auto">
         {/* logo */}
         <Logo />
@@ -52,28 +39,28 @@ export default function Navbar() {
                   href={link.url}
                   className="text-gray-200 hover:text-cyan-500 font-medium transition-colors duration-300"
                 >
-                  {link.label}
+                  {t(link.label)}
                 </Link>
               </li>
             );
           })}
         </ul>
-
-        {/* button */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageSwitcher />
           <LinkButton
             href="/documents/_CVResume.pdf"
-            text="Download CV"
+            text={t("DownloadCv")}
             download={true}
             icon={LuDownload}
             iconPosition="left"
           />
         </div>
+
         <button
           onClick={() => setNavOpen(!navOpen)}
           className="w-8 h-8 cursor-pointer z-100 lg:hidden text-white"
         >
-          {navOpen ? <LuMenu size={30} /> : <LuMenu size={30} />}
+          <LuMenu size={30} />
         </button>
         <MobileNav navOpen={navOpen} setNavOpen={setNavOpen} />
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Titles from "../general/Titles";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const testimonials = [
   {
@@ -42,10 +43,11 @@ const testimonials = [
 ];
 
 export default function TestimonialSection() {
+  const t = useTranslations("Testimonials");
   return (
-    <section id="testimonoals">
+    <section id="testimonials">
       <div className="">
-        <Titles title="Mọi Người Đánh Giá Gì Về Tôi?" />
+        <Titles title={t("TestimonialsTitle")} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] sm:w-[80%] mx-auto mt-12">
           {testimonials.map((testimonial, index) => {
             return (
